@@ -136,8 +136,8 @@ class TextMixer(BaseEstimator, TransformerMixin):
             raise TypeError("Este Transformador solo funciona en DF de Pandas")
     
     def fit(self, X, *_):
-        return pd.get_dummies(X[self.columns], columns = self.columns).columns'''
-
+        self.dummies_cols_ = pd.get_dummies(X[self.columns], columns = self.columns).columns'''
+        return self
 
 # In[11]:
 
